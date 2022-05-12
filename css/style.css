@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+main {
+  height: 100vh;
+  background-color: black;
+  background-image: url("../bg.png");
+  background-size: cover;
+}
+
+main .container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .navbar {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .navbar .nav a {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 1.05rem;
+  margin-left: 3rem;
+  letter-spacing: 0.25rem;
+}
+
+main .navbar .nav a:hover {
+  color: #ffd60a;
+}
+
+main .hero {
+  height: 78vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .hero .name {
+  font-family: "Playfair Display", serif;
+  font-size: 12rem;
+  margin-left: 1rem;
+}
+
+main .hero .by-line {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  color: #ffd60a;
+  letter-spacing: 0.75rem;
+  margin-top: -0.5rem;
+}
+/*# sourceMappingURL=style.css.map */
