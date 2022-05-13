@@ -4,23 +4,30 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: white;
+}
+
+:root {
+  --dark-color: rgb(25, 25, 25);
+  --primay-color: white;
+  --secondary-color: #f2c110;
 }
 
 main {
   height: 100vh;
-  background-color: black;
-  background-image: url("../bg.png");
+  background-color: var(--dark-color);
+  background-image: url(../images/bg.png);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
-main .container {
+.container {
   width: 90%;
   margin: 0 auto;
+  height: 100%;
 }
 
-main .navbar {
-  height: 100px;
+nav {
+  height: 125px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,21 +39,23 @@ main .navbar {
           align-items: center;
 }
 
-main .navbar .nav a {
-  color: white;
-  font-family: "Roboto", sans-serif;
+nav .nav-links a {
+  color: var(--primay-color);
   text-decoration: none;
-  font-size: 1.05rem;
-  margin-left: 3rem;
-  letter-spacing: 0.25rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2rem;
+  margin-left: 75px;
+  font-size: 1.25rem;
+  -webkit-transition: color ease-in-out 200ms;
+  transition: color ease-in-out 200ms;
 }
 
-main .navbar .nav a:hover {
-  color: #ffd60a;
+nav .nav-links a:hover {
+  color: var(--secondary-color);
 }
 
-main .hero {
-  height: 78vh;
+section.hero {
+  height: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,25 +63,24 @@ main .hero {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
-main .hero .name {
+section.hero .name {
+  color: var(--primay-color);
   font-family: "Playfair Display", serif;
-  font-size: 12rem;
+  font-size: 11rem;
   margin-left: 1rem;
+  line-height: 12rem;
 }
 
-main .hero .by-line {
+section.hero .byline {
+  color: var(--secondary-color);
   font-family: "Roboto", sans-serif;
-  font-size: 1.75rem;
-  color: #ffd60a;
+  font-size: 2.25rem;
   letter-spacing: 0.75rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   font-weight: 300;
 }
 
@@ -126,7 +134,7 @@ main .hero .by-line {
 }
 
 .links .contact-links a {
-  margin-top: 3.1rem;
+  margin-top: 3rem;
 }
 
 .links .contact-links a img {
@@ -139,14 +147,5 @@ main .hero .by-line {
 .links .contact-links a img:hover {
   -webkit-transform: scale(120%);
           transform: scale(120%);
-=======
-  margin-top: -0.5rem;
->>>>>>> parent of b3330f4 ('new changes')
-=======
-  margin-top: -0.5rem;
->>>>>>> parent of b3330f4 ('new changes')
-=======
-  margin-top: -0.5rem;
->>>>>>> parent of b3330f4 ('new changes')
 }
 /*# sourceMappingURL=style.css.map */
