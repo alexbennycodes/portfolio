@@ -71,6 +71,7 @@ main .hero .by-line {
   color: #ffd60a;
   letter-spacing: 0.75rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-weight: 300;
 }
 
@@ -137,6 +138,9 @@ main .hero .by-line {
 .links .contact-links a img:hover {
   -webkit-transform: scale(120%);
           transform: scale(120%);
+=======
+  margin-top: -0.5rem;
+>>>>>>> parent of b3330f4 ('new changes')
 =======
   margin-top: -0.5rem;
 >>>>>>> parent of b3330f4 ('new changes')
