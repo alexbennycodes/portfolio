@@ -4,107 +4,76 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //color: white;
-}
-:root {
-  --dark-color: rgb(25, 25, 25);
-  --primay-color: white;
-  --secondary-color: #f2c110;
+  color: white;
 }
 
 main {
   height: 100vh;
-  background-color: var(--dark-color);
-  background-image: url(../images/bg.png);
+  background-color: black;
+  background-image: url("../bg.png");
   background-size: cover;
-  background-repeat: no-repeat;
-}
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-  height: 100%;
-}
-
-nav {
-  height: 125px;
-  //background-color: aqua;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .nav-links {
-    a {
-      color: var(--primay-color);
-      text-decoration: none;
-      font-family: "Roboto", sans-serif;
-      letter-spacing: 0.2_rem;
-      margin-left: 75px;
-      font-size: 1.25rem;
-      transition: color ease-in-out 200ms;
-
-      &:hover {
-        color: var(--secondary-color);
-      }
-    }
-  }
-}
-
-section.hero {
-  height: 45%;
-  //background-color: aliceblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-
-  .name {
-    color: var(--primay-color);
-    font-family: "Playfair Display", serif;
-    font-size: 11rem;
-    margin-left: 1rem;
-    line-height: 12rem;
+  .container {
+    width: 90%;
+    margin: 0 auto;
   }
 
-  .byline {
-    color: var(--secondary-color);
-    font-family: "Roboto", sans-serif;
-    font-size: 2.25rem;
-    letter-spacing: 0.75rem;
-    font-weight: 300;
-  }
-}
-
-.links {
-  display: flex;
-  height: 35%;
-  .arrow {
-    width: 50.5%;
+  .navbar {
+    height: 100px;
+    //background-color: grey;
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
-    a {
-      img {
-        transition: transform ease-in 100ms;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+      a {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        text-decoration: none;
+        font-size: 1.05rem;
+        margin-left: 3rem;
+        letter-spacing: 0.25rem;
+
         &:hover {
-          transform: scale(120%);
+          color: #ffd60a;
         }
       }
     }
   }
-  .contact-links {
-    width: 49.5%;
+
+  .hero {
+    height: 78vh;
+    //background-color: greenyellow;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     justify-content: end;
     align-items: flex-end;
     a {
-      margin-top: 3rem;
+      margin-top: 3.1rem;
       img {
         transition: transform ease-in 50ms;
         &:hover {
           transform: scale(120%);
         }
       }
+=======
+    justify-content: center;
+    //align-items: center;
+
+    .name {
+      font-family: "Playfair Display", serif;
+      font-size: 12rem;
+      margin-left: 1rem;
+    }
+
+    .by-line {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.75rem;
+      color: #ffd60a;
+      letter-spacing: 0.75rem;
+      margin-top: -0.5rem;
+>>>>>>> parent of b3330f4 ('new changes')
     }
   }
 }
