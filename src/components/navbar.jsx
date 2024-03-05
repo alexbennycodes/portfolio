@@ -4,18 +4,18 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between text-white container gap-4 mx-auto px-4 py-2 rounded-lg w-[95%] inset-x-0 z-10 absolute top-8">
+    <div className="flex justify-between text-white container gap-4 mx-auto px-4 py-2 rounded-lg w-[95%] inset-x-0 z-20 fixed top-8">
       <div className="flex gap-2 items-center py-2">
         <Link
           className="flex items-center space-x-2 flex-shrink-0 relative z-50"
           href="/"
         >
-          <div className="hover:scale-110 duration-200 transition-all ease-in-out text-[#0be881]">
+          <div className="duration-500 transition-all ease-in-out hover:text-[#0be881]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 732.65 521.65"
-              width={46}
-              height={46}
+              width={42}
+              height={42}
               fill="currentColor"
             >
               <path
