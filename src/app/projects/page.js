@@ -2,43 +2,29 @@
 
 import Curve from "@/components/Curve";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
 const cards = [
   {
-    url: "/imgs/abstract/1.jpg",
-    title: "Coming Soon",
+    url: "/project1.jpeg",
+    title: "Wordle Clone",
+    liveLink: "https://world-almanac.vercel.app/",
+    githubLink: "https://github.com/alexbennycodes/world-almanac-react",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Coming Soon",
+    url: "/project2.jpg",
+    title: "World Almanac",
+    liveLink: "https://alexbennycodes.github.io/wordle-clone/",
+    githubLink: "https://github.com/alexbennycodes/wordle-clone",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
+    url: null,
     title: "Coming Soon",
     id: 3,
-  },
-  {
-    url: "/imgs/abstract/4.jpg",
-    title: "Coming Soon",
-    id: 4,
-  },
-  {
-    url: "/imgs/abstract/5.jpg",
-    title: "Coming Soon",
-    id: 5,
-  },
-  {
-    url: "/imgs/abstract/6.jpg",
-    title: "Coming Soon",
-    id: 6,
-  },
-  {
-    url: "/imgs/abstract/7.jpg",
-    title: "Coming Soon",
-    id: 7,
   },
 ];
 
@@ -46,9 +32,9 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200 bg-transparent backdrop-blur-3xl rounded-md border border-white/10"
+      className="group relative h-[400px] aspect-[16/9] overflow-hidden bg-neutral-200 bg-transparent backdrop-blur-3xl rounded-md border border-white/10"
     >
-      <div className="grain opacity-25"></div>
+      {card.url && <Image alt={card.title} src={card.url} fill />}
       <div
         style={{
           backgroundSize: "cover",
@@ -56,10 +42,53 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="p-8 text-6xl font-black uppercase text-white pointer-events-none text-center">
-          {card.title}
-        </p>
+      <div className="absolute bottom-0 w-full z-10 h-3/4 flex flex-col justify-end bg-gradient-to-b from-transparent to-black">
+        <div className="p-8 flex items-center gap-3 justify-between">
+          <p className="text-4xl font-black uppercase text-white pointer-events-none">
+            {card.title}
+          </p>
+          <div className="flex items-center gap-5">
+            {card.liveLink && (
+              <Link href={card.liveLink} target="_blank">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth={0}
+                  viewBox="0 0 24 24"
+                  height="30"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-white hover:text-[#0be881]"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" stroke="none" />
+                  <path
+                    d="M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3a2 2 0 00-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8a2 2 0 00-2-2zm0 14H3V8h18v12zM9 10v8l7-4z"
+                    stroke="none"
+                  />
+                </svg>
+              </Link>
+            )}
+            {card.githubLink && (
+              <Link href={card.githubLink} target="_blank" className="mt-1">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth={0}
+                  viewBox="0 0 480 512"
+                  height="30"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-white hover:text-[#0be881]"
+                >
+                  <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                    stroke="none"
+                  />
+                </svg>
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -77,8 +106,8 @@ export default function About() {
         className="h-screen relative w-full overflow-auto z-10"
         ref={targetRef}
       >
-        <section className="relative h-[300vh]">
-          <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+        <section className="relative h-[250vh]">
+          <div className="sticky top-0 h-screen flex flex-col pt-40 overflow-hidden">
             <div
               className="pointer-events-none absolute inset-x-0 transform-gpu overflow-hidden blur-3xl bottom-24"
               aria-hidden="true"
