@@ -8,17 +8,18 @@ import { useRef } from "react";
 
 const cards = [
   {
-    url: "/project1.jpeg",
-    title: "Wordle Clone",
-    liveLink: "https://world-almanac.vercel.app/",
-    githubLink: "https://github.com/alexbennycodes/world-almanac-react",
-    id: 1,
+    url: "/project1.png",
+    title: "TerraSpark",
+    liveLink: "https://terra-spark.vercel.app/",
+    githubLink: "https://github.com/alexbennycodes/terra-spark",
+    id: 2,
   },
   {
-    url: "/project2.jpg",
-    title: "World Almanac",
+    url: "/project2.jpeg",
+    title: "Wordle Clone",
     liveLink: "https://alexbennycodes.github.io/wordle-clone/",
     githubLink: "https://github.com/alexbennycodes/wordle-clone",
+
     id: 2,
   },
   {
