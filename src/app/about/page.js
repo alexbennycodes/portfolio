@@ -39,57 +39,59 @@ export default function About() {
         ></div>
       </div>
 
-      <div className="container mx-auto pt-40 overflow-hidden z-10">
-        <motion.h1
-          initial="initial"
-          animate="enter"
-          variants={slideDown}
-          className="text-7xl font-semibold text-[#0be881]"
-        >
-          About
-        </motion.h1>
-        <div className="space-y-5 mt-14 text-3xl">
-          <motion.p
+      <div className="mx-auto overflow-auto max-h-full absolute inset-0 py-32 md:py-40">
+        <div className="container px-5 mx-auto">
+          <motion.h1
             initial="initial"
             animate="enter"
-            variants={slideUp}
-            custom={1}
+            variants={slideDown}
+            className="text-5xl md:text-7xl font-semibold text-[#0be881]"
           >
-            With 2 years of experience under my belt, I&apos;m a passionate
-            front-end developer specializing in crafting user-centric
-            interfaces. React and its related libraries are my tools of choice,
-            allowing me to translate ideas into interactive and visually
-            stunning experiences.
-          </motion.p>
-          <motion.p
-            initial="initial"
-            animate="enter"
-            variants={slideUp}
-            custom={2}
-          >
-            From pixel-perfect layouts to seamless cross-device adaptation, I
-            bridge the gap between design and development. I thrive on
-            collaboration and clear communication, turning complex projects into
-            successful realities.
-          </motion.p>
-          <motion.p
-            initial="initial"
-            animate="enter"
-            variants={slideUp}
-            custom={3}
-          >
-            Beyond coding, I&apos;m always exploring new design trends,
-            tinkering with side projects, and staying up-to-date on the latest
-            tech advancements.
-          </motion.p>
-          <motion.p
-            initial="initial"
-            animate="enter"
-            variants={slideUp}
-            custom={3}
-          >
-            PS: I know how to center a div. 🌝
-          </motion.p>
+            About
+          </motion.h1>
+          <div className="space-y-5  mt-8 md:mt-14 text-xl md:text-3xl">
+            <motion.p
+              initial="initial"
+              animate="enter"
+              variants={slideUp}
+              custom={1}
+            >
+              With 2 years of experience under my belt, I&apos;m a passionate
+              front-end developer specializing in crafting user-centric
+              interfaces. React and its related libraries are my tools of
+              choice, allowing me to translate ideas into interactive and
+              visually stunning experiences.
+            </motion.p>
+            <motion.p
+              initial="initial"
+              animate="enter"
+              variants={slideUp}
+              custom={2}
+            >
+              From pixel-perfect layouts to seamless cross-device adaptation, I
+              bridge the gap between design and development. I thrive on
+              collaboration and clear communication, turning complex projects
+              into successful realities.
+            </motion.p>
+            <motion.p
+              initial="initial"
+              animate="enter"
+              variants={slideUp}
+              custom={3}
+            >
+              Beyond coding, I&apos;m always exploring new design trends,
+              tinkering with side projects, and staying up-to-date on the latest
+              tech advancements.
+            </motion.p>
+            <motion.p
+              initial="initial"
+              animate="enter"
+              variants={slideUp}
+              custom={3}
+            >
+              PS: I know how to center a div. 🌝
+            </motion.p>
+          </div>
         </div>
       </div>
     </Curve>

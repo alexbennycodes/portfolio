@@ -99,7 +99,7 @@ export default function Home() {
         <motion.div
           data-scroll
           data-scroll-speed={0.1}
-          className="absolute top-[45%] right-[20%] text-white"
+          className="absolute top-[45%] right-[20%] text-white space-y-3"
           initial="initial"
           animate="enter"
           variants={opacity}
@@ -116,8 +116,8 @@ export default function Home() {
               fill="white"
             />
           </svg>
-          <p className="text-[2.5vw] tracking-wide">Alex Benny</p>
-          <div className="mt-2 text-[#0be881] flex gap-5 items-center">
+          <h2 className="text-4xl lg:text-5xl tracking-wide">Alex Benny</h2>
+          <div className="text-[#0be881] flex gap-5 items-center">
             <Link
               href="https://github.com/alexbennycodes"
               target="_blank"
