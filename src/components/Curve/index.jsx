@@ -45,10 +45,10 @@ export default function Curve({ children }) {
     <div className="h-screen overflow-hidden">
       <div
         style={{ opacity: dimensions.width == null ? 1 : 0 }}
-        className="fixed h-[calc(100vh_+_600px)] w-screen pointer-events-none left-0 top-0 bg-[#0be881] transition-opacity duration-0 ease-linear delay-100 z-[9999]"
+        className="fixed h-[calc(100vh_+_600px)] w-screen pointer-events-none left-0 top-0 bg-primary transition-opacity duration-0 ease-linear delay-100 z-[9999]"
       />
       <motion.h1
-        className="absolute left-1/2 top-[40%] text-black font-semibold text-7xl z-[9999]  -translate-x-1/2 text-center"
+        className="absolute left-1/2 top-[40%] text-white font-semibold text-7xl z-[9999]  -translate-x-1/2 text-center"
         {...anim(text)}
       >
         {routes[pathname]}
@@ -81,7 +81,7 @@ const SVG = ({ height, width }) => {
       {...anim(translate)}
       className="fixed h-[calc(100vh_+_600px)] w-screen pointer-events-none left-0 top-[-300px] z-[9998]"
     >
-      <motion.path {...anim(curve(initialPath, targetPath))} fill="#0be881" />
+      <motion.path {...anim(curve(initialPath, targetPath))} fill="#0db2f8" />
     </motion.svg>
   );
 };

@@ -1,9 +1,9 @@
 import Navbar from "@/components/navbar";
-import { DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import Providers from "./Providers";
 import "./globals.css";
 
-const dm_sans = DM_Sans({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Alex Benny",
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className={dm_sans.className}>
+      <body className={inter.className}>
         <Navbar />
         <Providers>{children}</Providers>
       </body>
