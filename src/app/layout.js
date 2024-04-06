@@ -1,9 +1,24 @@
 import Navbar from "@/components/navbar";
-import { Inter } from "next/font/google";
-import Providers from "./Providers";
+import { Bricolage_Grotesque, Caveat, Inter } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const title = Bricolage_Grotesque({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-title",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const zeyada = Caveat({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-cursive",
+});
 
 export const metadata = {
   title: "Alex Benny",
@@ -17,9 +32,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body className={cn(title.variable, inter.variable, zeyada.variable)}>
         <Navbar />
-        <Providers>{children}</Providers>
+        <>{children}</>
       </body>
     </html>
   );

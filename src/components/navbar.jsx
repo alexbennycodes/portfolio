@@ -28,9 +28,9 @@ const MobileNav = () => {
             checked={isOpen}
             onClick={() => setIsOpen((prev) => !prev)}
           />
-          <span className="flex w-7 h-[3px] mb-[6.5px] relative bg-white rounded z-30 origin-top-left duration-500 transition-all peer-checked:rotate-45 peer-checked:translate-[-3px, -1px] peer-checked:bg-white"></span>
-          <span className="flex w-7 h-[3px] mb-[6.5px] relative bg-white rounded z-30 origin-[5px 0] duration-500 transition-all peer-checked:opacity-0 peer-checked:bg-white"></span>
-          <span className="flex w-7 h-[3px] mb-[6.5px] relative bg-white rounded z-30 duration-500 transition-all origin-bottom-left peer-checked:opacity-100 peer-checked:-rotate-45 peer-checked:bg-white"></span>
+          <span className="flex w-5 h-[2px] mb-[5px] relative bg-white rounded z-30 origin-top-left duration-500 transition-all peer-checked:rotate-45 peer-checked:translate-[-3px, -1px] peer-checked:bg-white"></span>
+          <span className="flex w-5 h-[2px] mb-[5px] relative bg-white rounded z-30 origin-[5px 0] duration-500 transition-all peer-checked:opacity-0 peer-checked:bg-white"></span>
+          <span className="flex w-5 h-[2px] mb-[5px] relative bg-white rounded z-30 duration-500 transition-all origin-bottom-left peer-checked:opacity-100 peer-checked:-rotate-45 peer-checked:bg-white"></span>
           <div className="fixed top-[0px] right-0 h-screen  w-screen bg-black/40 backdrop-blur-md origin-center translate-x-[120vw] transform duration-500 peer-checked:transform-none z-20"></div>
           <ul className="fixed top-0 right-0 md:w-[350px] w-[75%] h-screen shadow-sm shadow-white/40 p-[50px] bg-primary origin-center translate-x-[120vw] transform duration-500 peer-checked:translate-x-[7%] flex flex-col items-end pr-[40px] pt-[75px] z-20">
             {links.map((link, i) => (
@@ -63,12 +63,12 @@ const Navbar = () => {
           className="flex items-center space-x-2 flex-shrink-0 relative z-10"
           href="/"
         >
-          <div className="duration-500 transition-all ease-in-out hover:text-primary">
+          <div className="duration-500 transition-all ease-in-out hover:text-primary  h-7 w-7 md:h-10 md:w-10">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 732.65 521.65"
-              width={42}
-              height={42}
+              width="100%"
+              height="100%"
               fill="currentColor"
             >
               <path

@@ -1,6 +1,5 @@
 "use client";
 
-import Curve from "@/components/Curve";
 import { motion } from "framer-motion";
 
 const slideDown = {
@@ -9,7 +8,7 @@ const slideDown = {
   },
   enter: {
     y: 0,
-    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.5 },
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1] },
   },
 };
 
@@ -17,15 +16,15 @@ export const slideUp = {
   initial: {
     y: 100,
   },
-  enter: (i) => ({
+  enter: () => ({
     y: 0,
-    transition: { duration: 0.5, delay: 0.25 * i },
+    transition: { duration: 0.5 },
   }),
 };
 
 export default function About() {
   return (
-    <Curve>
+    <>
       <div
         className="pointer-events-none absolute inset-x-0 transform-gpu overflow-hidden blur-3xl bottom-24"
         aria-hidden="true"
@@ -45,7 +44,7 @@ export default function About() {
             initial="initial"
             animate="enter"
             variants={slideDown}
-            className="text-5xl md:text-7xl font-semibold text-primary"
+            className="text-5xl md:text-7xl font-bold text-primary tracking-tighter font-title"
           >
             About
           </motion.h1>
@@ -94,6 +93,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </Curve>
+    </>
   );
 }

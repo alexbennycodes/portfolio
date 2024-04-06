@@ -23,6 +23,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        title: ["var(--font-title)"],
+        cursive: ["var(--font-cursive)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -1,6 +1,5 @@
 "use client";
 
-import Curve from "@/components/Curve";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -54,9 +53,9 @@ const Card = ({ card }) => {
       ></div>
       <div className="absolute bottom-0 w-full z-10 h-3/4 flex flex-col justify-end bg-gradient-to-b from-transparent to-black">
         <div className="p-8 flex items-center gap-3 justify-between">
-          <p className="text-4xl font-bold tracking-tight text-white pointer-events-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white pointer-events-none">
             {card.title}
-          </p>
+          </h1>
           <div className="flex items-center gap-5">
             {card.liveLink && (
               <Link href={card.liveLink} target="_blank">
@@ -111,42 +110,40 @@ export default function About() {
   const x = useTransform(scrollYProgress, [0, 1], ["0.75%", "-85%"]);
 
   return (
-    <Curve>
-      <div
-        className="h-screen relative w-full overflow-auto z-10"
-        ref={targetRef}
-      >
-        <section className="relative h-[300vh]">
-          <div className="sticky top-0 h-screen flex flex-col pt-32 md:pt-48 overflow-hidden">
+    <div
+      className="h-screen relative w-full overflow-auto z-10"
+      ref={targetRef}
+    >
+      <section className="relative h-[300vh]">
+        <div className="sticky top-0 h-screen flex flex-col pt-32 md:pt-48 overflow-hidden">
+          <div
+            className="pointer-events-none absolute inset-x-0 transform-gpu overflow-hidden blur-3xl bottom-24"
+            aria-hidden="true"
+          >
             <div
-              className="pointer-events-none absolute inset-x-0 transform-gpu overflow-hidden blur-3xl bottom-24"
-              aria-hidden="true"
-            >
-              <div
-                className="relative right-[-60vw] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-blue-400 opacity-30 sm:w-[72.1875rem]"
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-              ></div>
-            </div>
-            <motion.h1
-              initial="initial"
-              animate="enter"
-              className="text-5xl md:text-7xl font-semibold text-primary ml-16"
-            >
-              Projects
-            </motion.h1>
-            <div className="flex mt-14">
-              <motion.div style={{ x }} className="flex gap-4">
-                {cards.map((card) => {
-                  return <Card card={card} key={card.id} />;
-                })}
-              </motion.div>
-            </div>
+              className="relative right-[-60vw] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-blue-400 opacity-30 sm:w-[72.1875rem]"
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+            ></div>
           </div>
-        </section>
-      </div>
-    </Curve>
+          <motion.h1
+            initial="initial"
+            animate="enter"
+            className="text-5xl md:text-7xl font-bold text-primary ml-16 tracking-tighter font-title"
+          >
+            Projects
+          </motion.h1>
+          <div className="flex mt-14">
+            <motion.div style={{ x }} className="flex gap-4">
+              {cards.map((card) => {
+                return <Card card={card} key={card.id} />;
+              })}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
