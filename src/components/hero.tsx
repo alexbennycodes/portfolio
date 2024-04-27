@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="relative pt-12 lg:pt-6">
-      <div className="flex flex-col items-center justify-center container max-w-5xl overflow-x-hidden min-h-screen max-w-screen">
+    <section className="relative">
+      <div className="flex flex-col items-center justify-center container max-w-5xl overflow-x-hidden lg:min-h-screen max-w-screen pt-52 pb-56 lg:pt-6 lg:pb-0">
         <div className="absolute w-[25vw] lg:w-[15vw] h-full mix-blend-screen -rotate-[55deg] left-[7vw] -top-1/3 ">
           <SparklesCore
             id="tsparticlesfullpage"
@@ -21,23 +21,20 @@ const Hero = () => {
           <div className="h-full w-full absolute top-0 bg-gradient-radial rounded-full from-white/60 lg:from-white/50 to-transparent z-10 blur-3xl animate-in fade-in-10 slide-in-from-top-10"></div>
         </div>
         <div className="w-full duration-1000 animate-in fade-in-10 slide-in-from-bottom-10">
-          <h1 className="text-5xl lg:text-[95px] font-title-light-italic tracking-tight font-light">
+          <h1 className="text-7xl lg:text-[95px] font-title-light-italic tracking-tight font-light">
             Alex Benny
           </h1>
-          <h2 className="text-3xl leading-8 lg:text-7xl mt-5 lg:mt-10 font-title tracking-tight font-light text-gray-300">
+          <h2 className="text-4xl leading-8 lg:text-7xl mt-5 lg:mt-10 font-title tracking-tight font-light text-gray-300">
             Software{" "}
-            <span className="inline-flex gap-2 lg:gap-3 items-center lg:items-end">
-              <span className="font-normal text-gray-200 italic">Engineer</span>{" "}
-              with{" "}
-            </span>
-            <br />{" "}
+            <span className="font-normal text-gray-200 italic">Engineer</span>{" "}
+            with <br />{" "}
             <span className="text-gray-200 lg:text-[100px] leading-[8px]">
               2
             </span>{" "}
-            year of industry{" "}
+            years of industry{" "}
             <span className="italic text-gray-200">experience</span>
           </h2>
-          <p className="mt-5 lg:mt-12 text-sm lg:text-xl text-gray-200/60 font-medium lg:tracking-wider text-balance">
+          <p className="mt-5 lg:mt-12 lg:text-xl text-gray-200/60 font-medium lg:tracking-wider text-balance">
             {`I'm a developer who builds user-friendly applications.  I love turning complex problems into clean, efficient code.  I'm always learning new technologies and frameworks to stay ahead of the curve.  If you're looking for someone who's passionate about creating great software.`}
           </p>
           <Link

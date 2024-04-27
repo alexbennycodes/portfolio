@@ -9,6 +9,7 @@ interface ProjectProps {
   liveLink: string;
   githubLink: string;
   id: number;
+  desc: string;
 }
 
 const PROJECTS = [
@@ -18,6 +19,7 @@ const PROJECTS = [
     liveLink: "https://resume-rocket-one.vercel.app/",
     githubLink: "https://github.com/alexbennycodes/resume-rocket",
     id: 1,
+    desc: "Developed a resume analysis tool utilizing Next.js and Hugging Face API, powered by the Mistral AI model. Enables users to upload their resumes for a comprehensive overview, including score assessment, strengths, weaknesses, and targeted job suggestions.",
   },
   {
     url: "/project1.png",
@@ -25,13 +27,14 @@ const PROJECTS = [
     liveLink: "https://terra-spark.vercel.app/",
     githubLink: "https://github.com/alexbennycodes/terra-spark",
     id: 2,
+    desc: "Terraspark empowers exploration with a Next.js app. It offers a global registry of countries, each with detailed pages. This project showcases my skills in building user-friendly interfaces, data management, and utilizing Next.js's View Transitions API for a smooth experience.",
   },
   {
     url: "/project2.jpeg",
     title: "Wordle Clone",
     liveLink: "https://alexbennycodes.github.io/wordle-clone/",
     githubLink: "https://github.com/alexbennycodes/wordle-clone",
-
+    desc: "Wordle brings the thrill of Wordle to life with a web app built using pure JavaScript. Test your vocabulary by guessing the daily five-letter word. Color cues guide your way, keeping you challenged and engaged. This project showcases my JavaScript skills for building interactive web experiences.",
     id: 3,
   },
 ];
@@ -70,11 +73,7 @@ const Projects = () => {
                 <h3 className="text-4xl font-semibold">{project.title}</h3>
               </div>
               <p className="prose text-gray-200/60 font-medium text-sm my-8 leading-[1.8] tracking-wide drop-shadow text-balance">
-                Developed a resume analysis tool utilizing Next.js and Hugging
-                Face API, powered by the Mistral AI model. Enables users to
-                upload their resumes for a comprehensive overview, including
-                score assessment, strengths, weaknesses, and targeted job
-                suggestions.
+                {project.desc}
               </p>
               <div className="flex justify-between mt-auto">
                 <Button

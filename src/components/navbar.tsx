@@ -21,10 +21,10 @@ const Navbar = () => {
             </svg>
           </div>
         </div>
-        <div className="w-fit p-4 rounded-full bg-primary-foreground shadow-xl border border-white/10 border-dashed relative flex gap-5">
+        <div className="w-fit py-4 px-6 rounded-full bg-primary-foreground shadow-xl border border-white/10 border-dashed relative flex gap-5">
           <Link
             href="https://github.com/alexbennycodes"
-            className="h-5 w-5"
+            className="h-5 w-5 hover:scale-110 transition-all duration-200"
             target="_blank"
           >
             <svg
@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="https://www.linkedin.com/in/alex-benny28/"
-            className="h-5 w-5"
+            className="h-5 w-5 hover:scale-110 transition-all duration-200"
             target="_blank"
           >
             <svg
@@ -59,7 +59,7 @@ const Navbar = () => {
           <Link
             href="https://twitter.com/AlexBennyTwts"
             target="_blank"
-            className="h-5 w-5"
+            className="h-5 w-5 hover:scale-110 transition-all duration-200"
           >
             <svg
               stroke="currentColor"
