@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
@@ -19,8 +18,8 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        title: ["var(--font-title)", ...fontFamily.serif],
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -75,6 +74,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.5s",
+        "fade-down": "fade-down 0.5s",
+        "skew-scroll": "skew-scroll 20s linear infinite",
+        "infinite-scroll": "infinite-scroll 20s linear infinite",
       },
     },
   },
