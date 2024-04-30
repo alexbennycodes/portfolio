@@ -41,7 +41,7 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <section className="container mx-auto my-48 max-w-5xl">
+    <section className="container mx-auto my-48 max-w-5xl duration-1000 animate-in fade-in-10 slide-in-from-bottom-10">
       <div className="flex items-center gap-3">
         <svg
           fill="white"
