@@ -16,7 +16,7 @@ const Hero = () => {
             particleDensity={25}
             speed={2}
             className="w-full h-full"
-            particleColor="#FFFFFF"
+            particleColor="#eaeeff"
           />
           <div className="h-full w-full absolute top-0 bg-gradient-radial rounded-full from-white/60 lg:from-white/50 to-transparent z-10 blur-3xl animate-in fade-in-10 slide-in-from-top-10"></div>
         </div>
@@ -39,9 +39,9 @@ const Hero = () => {
           </p>
           <Link
             href="mailto:alexbenny2811@gmail.com"
-            className="relative text-sm lg:text-base inline-flex h-10 lg:h-12 items-center justify-center bg-white px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-0 mt-10 rounded-full"
+            className="relative text-sm lg:text-base inline-flex h-10 lg:h-12 items-center justify-center bg-white px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-0 mt-10 rounded-full group/button"
           >
-            <div className="absolute -inset-0.5 -z-10 rounded-full bg-gradient-to-b from-[#c7d2fe] to-[#8678f9] opacity-75 blur" />
+            <div className="absolute -inset-0.5 -z-10 rounded-full bg-gradient-to-b from-[#c7d2fe] to-[#8678f9] opacity-75 blur group-hover/button:opacity-100 group-hover/button:blur-md transition-all duration-200 ease-in-out" />
             <svg
               viewBox="-0.5 0 25 25"
               fill="none"

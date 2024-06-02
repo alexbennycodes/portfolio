@@ -14,11 +14,19 @@ interface ProjectProps {
 
 const PROJECTS = [
   {
+    url: "/ziplink.png",
+    title: "ZipLink",
+    liveLink: "https://ziplink1.vercel.app/",
+    githubLink: "https://github.com/alexbennycodes/ziplink",
+    id: "ziplink",
+    desc: "ZipLink is a powerful URL shortener app built with Next.js, Prisma, TypeScript, Tailwind CSS, and PostgreSQL. Leveraging server actions, ZipLink ensures fast and reliable link shortening while providing a sleek and modern user interface. Enjoy robust analytics and easy management of your shortened URLs with ZipLink.",
+  },
+  {
     url: "/project3.png",
     title: "Resume Rocket",
     liveLink: "https://resume-rocket-one.vercel.app/",
     githubLink: "https://github.com/alexbennycodes/resume-rocket",
-    id: 1,
+    id: "resumerocket",
     desc: "Developed a resume analysis tool utilizing Next.js and Hugging Face API, powered by the Mistral AI model. Enables users to upload their resumes for a comprehensive overview, including score assessment, strengths, weaknesses, and targeted job suggestions.",
   },
   {
@@ -26,7 +34,7 @@ const PROJECTS = [
     title: "TerraSpark",
     liveLink: "https://terra-spark.vercel.app/",
     githubLink: "https://github.com/alexbennycodes/terra-spark",
-    id: 2,
+    id: "terraspark",
     desc: "Terraspark empowers exploration with a Next.js app. It offers a global registry of countries, each with detailed pages. This project showcases my skills in building user-friendly interfaces, data management, and utilizing Next.js's View Transitions API for a smooth experience.",
   },
   {
@@ -35,7 +43,7 @@ const PROJECTS = [
     liveLink: "https://alexbennycodes.github.io/wordle-clone/",
     githubLink: "https://github.com/alexbennycodes/wordle-clone",
     desc: "Wordle brings the thrill of Wordle to life with a web app built using pure JavaScript. Test your vocabulary by guessing the daily five-letter word. Color cues guide your way, keeping you challenged and engaged. This project showcases my JavaScript skills for building interactive web experiences.",
-    id: 3,
+    id: "wordle",
   },
 ];
 
@@ -127,7 +135,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="relative group-hover:scale-110 transition-all duration-300 ease-in-out">
-              <div className="bg-gradient-to-b from-primary-foreground group-hover:from-blue-950/20 transition-all duration-300 ease-in-out to-transparent h-[50px] absolute top-0 w-full z-10" />
+              <div className="bg-gradient-to-b from-primary-foreground  transition-all duration-300 ease-in-out to-transparent h-[50px] absolute top-0 w-full z-10" />
               <div className="h-[250px] w-full relative">
                 <Image
                   fill
