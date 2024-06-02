@@ -8,7 +8,7 @@ interface ProjectProps {
   title: string;
   liveLink: string;
   githubLink: string;
-  id: number;
+  id: string;
   desc: string;
 }
 
