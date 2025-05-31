@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden relative">
       <Hero />
-      <AboutMe />
-      <Projects />
+      {/* <AboutMe /> */}
+      {/* <Projects /> */}
     </main>
   );
 }

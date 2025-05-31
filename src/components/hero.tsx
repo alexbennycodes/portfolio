@@ -25,14 +25,8 @@ const Hero = () => {
             Alex Benny
           </h1>
           <h2 className="text-4xl leading-8 lg:text-7xl mt-5 lg:mt-10 font-title tracking-tight font-light text-gray-300">
-            Software{" "}
-            <span className="font-normal text-gray-200 italic">Engineer</span>{" "}
-            with <br />{" "}
-            <span className="text-gray-200 lg:text-[100px] leading-[8px]">
-              2
-            </span>{" "}
-            years of industry{" "}
-            <span className="italic text-gray-200">experience</span>
+            Software <i>Engineer</i> with <br /> 3 years of industry{" "}
+            <i>experience</i>
           </h2>
           <p className="mt-5 lg:mt-12 lg:text-xl text-gray-200/60 font-medium lg:tracking-wider text-balance">
             {`I'm a developer who builds user-friendly applications.  I love turning complex problems into clean, efficient code.  I'm always learning new technologies and frameworks to stay ahead of the curve.  If you're looking for someone who's passionate about creating great software.`}
