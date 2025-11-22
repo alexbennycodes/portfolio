@@ -1,7 +1,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Zap, Cpu, Layout, Server, Globe, Hand } from 'lucide-react';
+import { Cpu, Hand } from 'lucide-react';
+import { ReactIcon } from '@/icons/react';
+import { NextIcon } from '@/icons/next'
+import { SvelteIcon } from '@/icons/svelte';
+import { TailwindIcon } from '@/icons/tailwind';
+import { JSIcon } from '@/icons/js';
 
 const TechStackCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
   return (
@@ -29,11 +34,11 @@ const TechStackAnimation = () => {
   const [cursorState, setCursorState] = useState({ x: 60, y: 60, active: false });
 
   const items = [
-    { name: "React", icon: <Code className="w-5 h-5" />, color: "text-blue-400", bg: "bg-blue-500/10 backdrop-blur-sm", border: "border-blue-500/20" },
-    { name: "Next.js", icon: <Zap className="w-5 h-5" />, color: "text-white", bg: "bg-zinc-800/50 backdrop-blur-sm", border: "border-white/20" },
-    { name: "TypeScript", icon: <Cpu className="w-5 h-5" />, color: "text-blue-300", bg: "bg-blue-400/10 backdrop-blur-sm", border: "border-blue-400/20" },
-    { name: "Tailwind", icon: <Layout className="w-5 h-5" />, color: "text-cyan-400", bg: "bg-cyan-500/10 backdrop-blur-sm", border: "border-cyan-500/20" },
-    { name: "Svelte", icon: <Server className="w-5 h-5" />, color: "text-orange-400", bg: "bg-orange-500/10 backdrop-blur-sm", border: "border-orange-500/20" }
+    { name: "React", icon: <ReactIcon className="w-5 h-5" />, color: "text-blue-400", bg: "bg-blue-500/10 backdrop-blur-sm", border: "border-blue-500/20" },
+    { name: "Next.js", icon: <NextIcon className="w-5 h-5" />, color: "text-white", bg: "bg-zinc-800/50 backdrop-blur-sm", border: "border-white/20" },
+    { name: "JavaScript", icon: <JSIcon className="w-5 h-5" />, color: "text-yellow-300", bg: "bg-yellow-400/10 backdrop-blur-sm", border: "border-yellow-400/20" },
+    { name: "Tailwind", icon: <TailwindIcon className="w-5 h-5" />, color: "text-cyan-400", bg: "bg-cyan-500/10 backdrop-blur-sm", border: "border-cyan-500/20" },
+    { name: "Svelte", icon: <SvelteIcon className="w-5 h-5" />, color: "text-orange-400", bg: "bg-orange-500/10 backdrop-blur-sm", border: "border-orange-500/20" }
   ];
 
   const indexRef = useRef(currentIndex);
@@ -96,7 +101,7 @@ const TechStackAnimation = () => {
           return (
             <motion.div
               key={item.name}
-              className={`absolute w-64 p-4 border backdrop-blur-lg flex items-center gap-4 shadow-xl transition-colors ${item.bg} ${item.border}`}
+              className={`absolute w-52 px-4 py-5 border backdrop-blur-lg flex items-center gap-4 shadow-xl transition-colors ${item.bg} ${item.border}`}
               initial={{ opacity: 0, scale: 0.9, y: 20, zIndex: 0 }}
               animate={{
                 opacity: offset === 0 ? 1 : 1 - (offset * 0.2),
@@ -119,12 +124,11 @@ const TechStackAnimation = () => {
                 transition: { duration: 0.3 }
               }}
             >
-              <div className={`p-2 bg-white/10 ${item.color}`}>
+              <div className={`p-1 ${item.color}`}>
                 {item.icon}
               </div>
               <div>
                 <div className={`font-bold text-base ${item.color}`}>{item.name}</div>
-                <div className="text-[10px] text-zinc-400 uppercase tracking-wider font-mono">Core Technology</div>
               </div>
             </motion.div>
           )

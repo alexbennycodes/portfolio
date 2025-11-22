@@ -76,7 +76,7 @@ const KeyboardSimulation = () => {
 
                   // Key Sizing
                   let width = "w-6";
-                  let fontSize = "text-[7px]";
+                  let fontSize = "text-[8px]";
                   let label = key.length === 1 ? key.toUpperCase() : key;
 
                   if (key === 'space') {
@@ -102,7 +102,7 @@ const KeyboardSimulation = () => {
                            color: isActive ? '#000' : '#52525b',
                            boxShadow: isActive ? '0 0 10px rgba(244, 63, 94, 0.6)' : 'none'
                         }}
-                        className={`h-6 border flex items-center justify-center font-mono font-medium select-none transition-colors duration-75 ${width} ${fontSize}`}
+                        className={`h-6 border flex items-center justify-center font-sans font-semibold select-none transition-colors duration-75 ${width} ${fontSize}`}
                      >
                         {label}
                      </motion.div>

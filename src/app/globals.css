@@ -59,13 +59,11 @@
 }
 
 .font-title-light-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  font-style: italic;
+  @apply font-serif font-light italic;
 }
 
 .font-title {
-  font-family: "Cormorant Garamond", serif;
+  @apply font-serif;
 }
 
 * {

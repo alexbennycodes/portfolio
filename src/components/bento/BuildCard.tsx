@@ -10,7 +10,7 @@ const BuildCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className="md:col-span-1 bg-surface border border-white/10 p-4 flex flex-col justify-between group hover:bg-white/5 transition-colors relative overflow-hidden h-full"
+      className="md:col-span-1 bg-surface border border-white/10 p-4 pt-2 flex flex-col justify-between group hover:bg-white/5 transition-colors relative overflow-hidden h-full"
     >
       <BuildSimulation />
     </motion.div>
@@ -105,7 +105,7 @@ const BuildSimulation = () => {
           <Package className={`w-4 h-4 ${status === 'DONE' ? 'text-green-400' : 'text-pink-400'}`} />
           <h3 className="text-sm font-bold text-white tracking-wide uppercase">Build</h3>
         </div>
-        <div className={`flex items-center gap-1.5 text-[9px] font-mono px-1.5 py-0.5 rounded border ${status === 'DONE'
+        <div className={`flex items-center gap-1.5 text-[9px] font-sans font-bold px-1.5 py-1 border ${status === 'DONE'
           ? 'bg-green-500/10 border-green-500/20 text-green-400'
           : status === 'BUILDING'
             ? 'bg-pink-500/10 border-pink-500/20 text-pink-400'
