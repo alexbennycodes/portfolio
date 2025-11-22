@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -20,9 +20,18 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Benny",
+  title: "Alex Benny | Software Engineer",
   description:
-    "I'm a developer who builds user-friendly applications. I love turning complex problems into clean, efficient code. I'm always learning new technologies and frameworks to stay ahead of the curve. If you're looking for someone who's passionate about creating great software.",
+    "Software Engineer with 3 years of industry experience. I build user-friendly applications by turning complex problems into clean, efficient code.",
+  keywords: ["Software Engineer", "Web Developer", "React", "Next.js", "TypeScript"],
+  authors: [{ name: "Alex Benny" }],
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -32,10 +41,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={cn(outfit.variable, cormorant.variable, "font-sans antialiased")}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

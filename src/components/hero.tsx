@@ -2,8 +2,9 @@
 
 import React, { MouseEvent } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { SparklesCore } from "@/components/sparkles";
 import Link from "next/link";
+import { BackgroundBeams } from "./ui/bg-beams";
+import { ArrowRightIcon } from "lucide-react";
 
 const Hero = () => {
   const mouseX = useMotionValue(0);
@@ -28,9 +29,11 @@ const Hero = () => {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      className="relative min-h-dvh flex flex-col justify-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
+      {/* <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 brightness-100 contrast- -z-10"></div> */}
+      <BackgroundBeams className="opacity-30 -z-20 mix-blend-screen" />
       <div className="container relative z-20 flex flex-col items-center justify-center max-w-6xl mx-auto px-4">
         {/* Sparkles and Gradient - Unchanged logic, just positioning tweaks if needed */}
         <div className="absolute w-[20vw] h-[40vh] mix-blend-screen left-[7vw] -top-1/3 pointer-events-none">
@@ -56,7 +59,7 @@ const Hero = () => {
             Alex Benny
           </motion.h1>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mt-4 lg:mt-6 font-sans tracking-tight font-normal text-muted-foreground max-w-4xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards ease-out">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl mt-4 lg:mt-6 text-balance font-sans tracking-tight font-normal text-muted-foreground max-w-4xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200 fill-mode-backwards ease-out">
             Software Engineer with <motion.span
               className="text-foreground font-medium inline-block cursor-default"
               whileHover={{ scale: 1.05, color: "#ffffff" }}
@@ -71,26 +74,10 @@ const Hero = () => {
           <div className="mt-10 lg:mt-14 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-backwards ease-out">
             <Link
               href="mailto:alexbenny2811@gmail.com"
-              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-foreground px-8 font-medium text-background transition-all duration-300 hover:bg-foreground/90 hover:scale-105 hover:ring-2 hover:ring-foreground/20 hover:ring-offset-2 hover:ring-offset-background"
+              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-foreground px-8 font-medium text-background transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_25px_rgba(255,255,255,0.45)]"
             >
-              <span className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                >
-                  <path
-                    d="M7 17L17 7M17 7H7M17 7V17"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
+              <ArrowRightIcon className="w-5 h-5 -rotate-45 mr-2" />
               <span className="relative">Let's connect</span>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 transition-opacity duration-500 group-hover:opacity-10" />
             </Link>
           </div>
         </div>

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-7 w-full z-30 animate-in fade-in-10 slide-in-from-top-10 duration-1000">
       <div className="container max-w-7xl flex items-center justify-between">
-        <div className="w-fit p-4 bg-primary-foreground shadow-xl border border-white/10 border-dashed relative">
+        <div className="w-fit p-4 bg-primary-foreground shadow-xl border border-white/10 relative">
           <div className="h-5 w-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const Navbar = () => {
             </svg>
           </div>
         </div>
-        <div className="w-fit py-4 px-6 bg-primary-foreground shadow-xl border border-white/10 border-dashed relative flex gap-5">
+        <div className="w-fit py-4 px-6 bg-primary-foreground shadow-xl border border-white/10 relative flex gap-5">
           <Link
             href="https://github.com/alexbennycodes"
             className="h-5 w-5 hover:scale-110 transition-all duration-200"
