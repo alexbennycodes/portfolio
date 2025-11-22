@@ -1,12 +1,11 @@
 import React from "react";
 import { SparklesCore } from "@/components/sparkles";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const Hero = () => {
   return (
     <section className="relative">
-      <div className="flex flex-col items-center justify-center container max-w-5xl overflow-x-hidden lg:min-h-screen max-w-screen pt-52 pb-56 lg:pt-6 lg:pb-0">
+      <div className="flex flex-col items-center justify-center container max-w-7xl overflow-x-hidden lg:min-h-screen max-w-screen pt-52 pb-56 lg:pt-6 lg:pb-0">
         <div className="absolute w-[25vw] lg:w-[15vw] h-full mix-blend-screen -rotate-[55deg] left-[7vw] -top-1/3 ">
           <SparklesCore
             id="tsparticlesfullpage"
@@ -28,12 +27,12 @@ const Hero = () => {
             Software <i>Engineer</i> with <br /> 3 years of industry{" "}
             <i>experience</i>
           </h2>
-          <p className="mt-5 lg:mt-12 lg:text-xl text-gray-200/60 font-medium lg:tracking-wider text-balance">
+          <p className="mt-5 lg:mt-12 lg:text-xl text-gray-200/60 lg:tracking-wider text-balance">
             {`I'm a developer who builds user-friendly applications.  I love turning complex problems into clean, efficient code.  I'm always learning new technologies and frameworks to stay ahead of the curve.  If you're looking for someone who's passionate about creating great software.`}
           </p>
           <Link
             href="mailto:alexbenny2811@gmail.com"
-            className="relative text-sm lg:text-base inline-flex h-10 lg:h-12 items-center justify-center bg-white px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-0 mt-10 rounded-full group/button"
+            className="relative text-sm lg:text-base inline-flex h-10 lg:h-12 items-center justify-center bg-white px-6 font-medium text-gray-950 transition-colors focus:outline-none focus:ring-0 mt-10 group/button"
           >
             <div className="absolute -inset-0.5 -z-10 rounded-full bg-gradient-to-b from-[#c7d2fe] to-[#8678f9] opacity-75 blur group-hover/button:opacity-100 group-hover/button:blur-md transition-all duration-200 ease-in-out" />
             <svg
