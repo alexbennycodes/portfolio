@@ -1,7 +1,7 @@
 "use client";
 
 import React, { MouseEvent } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
 import { BackgroundBeams } from "./ui/bg-beams";
 import { ArrowRightIcon } from "lucide-react";

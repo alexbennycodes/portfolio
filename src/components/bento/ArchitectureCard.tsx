@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { Server, Cpu, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 
 const ArchitectureCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {

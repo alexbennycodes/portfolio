@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Activity } from 'lucide-react';
 
 const StatusCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {

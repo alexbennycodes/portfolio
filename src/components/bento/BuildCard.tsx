@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Package, FileCode, Image as ImageIcon, File, CheckCircle2, Loader2 } from 'lucide-react';
 
 const BuildCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {

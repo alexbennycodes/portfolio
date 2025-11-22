@@ -1,7 +1,7 @@
 'use client'
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 
 // Define imports map for prefetching

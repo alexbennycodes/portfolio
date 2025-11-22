@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { motion, useMotionValue, animate, MotionValue } from 'framer-motion';
+import { motion, useMotionValue, animate, MotionValue } from 'motion/react';
 import { Smartphone, Tablet, Monitor } from 'lucide-react';
 
 const ResponsiveCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { Cpu, Hand } from 'lucide-react';
 import { ReactIcon } from '@/icons/react';
 import { NextIcon } from '@/icons/next'

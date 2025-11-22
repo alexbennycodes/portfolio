@@ -1,104 +1,104 @@
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { Terminal } from 'lucide-react';
 
 const FILES = [
-  {
-    name: 'useScroll.ts',
-    code: [
-      "import { useState, useEffect } from 'react';",
-      "",
-      "export const useScroll = () => {",
-      "  const [y, setY] = useState(0);",
-      "",
-      "  useEffect(() => {",
-      "    const handle = () => setY(window.scrollY);",
-      "    window.addEventListener('scroll', handle);",
-      "    return () => window.removeEventListener",
-      "      ('scroll', handle);",
-      "  }, []);",
-      "",
-      "  return y;",
-      "};"
-    ]
-  },
-  {
-    name: 'Button.tsx',
-    code: [
-        "import { motion } from 'framer-motion';",
-        "",
-        "interface Props { label: string; }",
-        "",
-        "export const Button = ({ label }: Props) => (",
-        "  <motion.button",
-        "    whileHover={{ scale: 1.05 }}",
-        "    whileTap={{ scale: 0.95 }}",
-        "    className=\"px-4 py-2 bg-primary\"",
-        "  >",
-        "    {label}",
-        "  </motion.button>",
-        ");"
-    ]
-  },
-  {
-    name: 'api.ts',
-    code: [
-        "export const fetchData = async (id) => {",
-        "  try {",
-        "    const res = await fetch('/api/' + id);",
-        "    if (!res.ok) throw new Error('Failed');",
-        "",
-        "    return await res.json();",
-        "  } catch (err) {",
-        "    console.error('API Error:', err);",
-        "    return null;",
-        "  }",
-        "};"
-    ]
-  }
+    {
+        name: 'useScroll.ts',
+        code: [
+            "import { useState, useEffect } from 'react';",
+            "",
+            "export const useScroll = () => {",
+            "  const [y, setY] = useState(0);",
+            "",
+            "  useEffect(() => {",
+            "    const handle = () => setY(window.scrollY);",
+            "    window.addEventListener('scroll', handle);",
+            "    return () => window.removeEventListener",
+            "      ('scroll', handle);",
+            "  }, []);",
+            "",
+            "  return y;",
+            "};"
+        ]
+    },
+    {
+        name: 'Button.tsx',
+        code: [
+            "import { motion } from 'motion/react';",
+            "",
+            "interface Props { label: string; }",
+            "",
+            "export const Button = ({ label }: Props) => (",
+            "  <motion.button",
+            "    whileHover={{ scale: 1.05 }}",
+            "    whileTap={{ scale: 0.95 }}",
+            "    className=\"px-4 py-2 bg-primary\"",
+            "  >",
+            "    {label}",
+            "  </motion.button>",
+            ");"
+        ]
+    },
+    {
+        name: 'api.ts',
+        code: [
+            "export const fetchData = async (id) => {",
+            "  try {",
+            "    const res = await fetch('/api/' + id);",
+            "    if (!res.ok) throw new Error('Failed');",
+            "",
+            "    return await res.json();",
+            "  } catch (err) {",
+            "    console.error('API Error:', err);",
+            "    return null;",
+            "  }",
+            "};"
+        ]
+    }
 ];
 
 const CodeCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
-  const [currentFileIndex, setCurrentFileIndex] = useState(0);
+    const [currentFileIndex, setCurrentFileIndex] = useState(0);
 
-  return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay }}
-      className="md:col-span-1 md:row-span-2 bg-[#0d0d0d] border border-white/10 p-0 flex flex-col overflow-hidden group relative"
-    >
-       <div className="h-8 border-b border-white/10 bg-white/5 flex items-center px-4 gap-2 select-none justify-between">
-          <div className="flex items-center gap-2">
-             <div className="w-2 h-2 rounded-full bg-red-500/50" />
-             <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
-             <div className="w-2 h-2 rounded-full bg-green-500/50" />
-          </div>
-          
-          <div className="flex items-center gap-2 opacity-50">
-             <Terminal size={10} className="text-zinc-400" />
-             <span className="text-[10px] font-bold text-zinc-300 tracking-wide uppercase">Code</span>
-          </div>
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay }}
+            className="md:col-span-1 md:row-span-2 bg-[#0d0d0d] border border-white/10 p-0 flex flex-col overflow-hidden group relative"
+        >
+            <div className="h-8 border-b border-white/10 bg-white/5 flex items-center px-4 gap-2 select-none justify-between">
+                <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-red-500/50" />
+                    <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
+                    <div className="w-2 h-2 rounded-full bg-green-500/50" />
+                </div>
 
-          <AnimatePresence mode='wait'>
-            <motion.span 
-                key={currentFileIndex}
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -5 }}
-                className="text-[10px] font-mono text-zinc-500"
-            >
-                {FILES[currentFileIndex].name}
-            </motion.span>
-          </AnimatePresence>
-       </div>
-       <div className="p-4 font-mono text-[10px] leading-5 text-zinc-400 relative flex-1 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] overflow-hidden">
-          <CodeSimulation fileIndex={currentFileIndex} onComplete={() => setCurrentFileIndex((prev) => (prev + 1) % FILES.length)} />
-       </div>
-    </motion.div>
-  );
+                <div className="flex items-center gap-2 opacity-50">
+                    <Terminal size={10} className="text-zinc-400" />
+                    <span className="text-[10px] font-bold text-zinc-300 tracking-wide uppercase">Code</span>
+                </div>
+
+                <AnimatePresence mode='wait'>
+                    <motion.span
+                        key={currentFileIndex}
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -5 }}
+                        className="text-[10px] font-mono text-zinc-500"
+                    >
+                        {FILES[currentFileIndex].name}
+                    </motion.span>
+                </AnimatePresence>
+            </div>
+            <div className="p-4 font-mono text-[10px] leading-5 text-zinc-400 relative flex-1 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] overflow-hidden">
+                <CodeSimulation fileIndex={currentFileIndex} onComplete={() => setCurrentFileIndex((prev) => (prev + 1) % FILES.length)} />
+            </div>
+        </motion.div>
+    );
 };
 
 const highlight = (code: string): React.ReactNode[] => {
@@ -151,7 +151,7 @@ const highlight = (code: string): React.ReactNode[] => {
 const CodeSimulation = ({ fileIndex, onComplete }: { fileIndex: number, onComplete: () => void }) => {
     const [lineIndex, setLineIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
-    
+
     const currentFile = FILES[fileIndex];
     const codeLines = currentFile.code;
 
@@ -191,7 +191,7 @@ const CodeSimulation = ({ fileIndex, onComplete }: { fileIndex: number, onComple
 
                 const isCurrentLine = i === lineIndex;
                 const text = isCurrentLine ? line.slice(0, charIndex) : line;
-                
+
                 return (
                     <div key={i} className="flex gap-3 min-h-[20px]">
                         <span className="text-zinc-700 select-none w-4 text-right shrink-0 font-mono">{i + 1}</span>

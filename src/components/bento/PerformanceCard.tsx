@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useInView, animate, AnimatePresence } from 'framer-motion';
+import { motion, useInView, animate, AnimatePresence } from 'motion/react';
 import { Zap } from 'lucide-react';
 
 const PerformanceCard: React.FC<{ delay?: number }> = ({ delay = 0 }) => {
