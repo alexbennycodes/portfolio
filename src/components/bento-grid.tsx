@@ -2,6 +2,7 @@
 
 import React, { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 const TechStackCard = lazy(() => import('./bento/TechStackCard'));
 const BuildCard = lazy(() => import('./bento/BuildCard'));
@@ -12,8 +13,8 @@ const ResponsiveCard = lazy(() => import('./bento/ResponsiveCard'));
 const PerformanceCard = lazy(() => import('./bento/PerformanceCard'));
 const InteractionCard = lazy(() => import('./bento/InteractionCard'));
 
-const CardLoader = () => (
-  <div className="w-full h-full min-h-[180px] bg-white/5 animate-pulse border border-white/10" />
+const CardLoader = ({ className }: { className?: string }) => (
+  <div className={cn(`w-full h-full min-h-[220px] bg-white/5 animate-pulse border border-white/10`, className)} />
 );
 
 const BentoGrid: React.FC = () => {
@@ -48,42 +49,42 @@ const BentoGrid: React.FC = () => {
         {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[220px]">
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-2' />}>
             {/* 1. Tech Stack (2x1) */}
             <TechStackCard delay={0} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-1' />}>
             {/* 2. Build Process (1x1) */}
             <BuildCard delay={0.1} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-1' />}>
             {/* 3. Status (1x1) */}
             <StatusCard delay={0.15} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-1 md:row-span-2' />}>
             {/* 4. Code Mastery (1x2) - Vertical */}
             <CodeCard delay={0.2} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-2' />}>
             {/* 5. System Architecture (2x1) */}
             <ArchitectureCard delay={0.25} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-1' />}>
             {/* 6. Responsive Design (1x1) */}
             <ResponsiveCard delay={0.3} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-1' />}>
             {/* 8. Interaction Lab (1x1) - Moved to end */}
             <InteractionCard delay={0.35} />
           </Suspense>
 
-          <Suspense fallback={<CardLoader />}>
+          <Suspense fallback={<CardLoader className='md:col-span-2' />}>
             {/* 7. Performance (2x1) - Moved here for better spacing */}
             <PerformanceCard delay={0.4} />
           </Suspense>
